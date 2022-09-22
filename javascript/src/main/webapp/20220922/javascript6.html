@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<!-- src/main/webapp/20220922/javascript6.html 
+	2~9사이의 숫자 선택하여 구구단 출력하기
+-->
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<style type="text/css">
+   input {text-align: right;} /*text-align: right; : 입력되는 값이 오른쪽 정렬*/
+   table {   width : 100%;    border-collapse: collapse;  }/*width : 100%; : 창이줄어도 화면에 다 출력*/
+   th,td {
+    border : 3px solid #bcbcbc;
+    text-align: center;
+    padding: 8px;
+    }
+   th { background-color: #B7F0B1;     color : #353535;     }
+   td { background-color: #F2F2F2;}
+   caption {   color : #111111;  font-size: 20px;
+          background-color: #FFFFFF;  }
+   input[type=text],input[type=password],textarea {
+      width:100%;
+   }    
+</style>
+
+<script type="text/javascript">
+	function printgugudan(){
+		let d = dan.value;
+		let html = "<table><tr><th>"+ d + "단</th></tr>"
+		for(let i=2; i<=9; i++){
+		html+="<tr><td>" +d + "*"+i +"="+(d*i)+"</td></tr>"
+	}
+	html+="</table>"
+	//innterHTML : html 번역하여 출력.
+	gugudan.innerHTML = html; // div id="gugudan" 안으로 이동시켜줌.
+	}
+</script>
+</head>
+<body>
+<h3>2~9사이의 숫자를 선택하여 해당 단의 구구단을 출력하기</h3>
+<!-- onchange : select 태그, checkbox태그, radio태그
+			선택된 값이 달라진 경우 발생되는 이벤트
+ -->
+<select id="dan" onchange="printgugudan()">
+	<option value="">선택하세요</option>
+	<option value="2">2단</option>
+	<option value="3">3단</option>
+	<option value="4">4단</option>
+	<option value="5">5단</option>
+	<option value="6">6단</option>
+	<option value="7">7단</option>
+	<option value="8">8단</option>
+	<option value="9">9단</option>
+</select>
+<div id="gugudan">
+
+
+</div>
+</body>
+</html>

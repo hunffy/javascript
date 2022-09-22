@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<!-- src/main/webapp/20220922/javascript4.html -->
+
+<html>
+<head>
+<meta charset="UTF-8">
+<title>window 객체의 함수</title>
+</head>
+<body>
+<script type="text/javascript">
+	let i=2
+	//eval 함수 : 수식을 계산해주는 함수
+	document.write("eval(3+4*(5-i))=" + eval(3+4*(5-i))+"<br>")
+	document.write("eval(3+4*5)=" + eval('3+4*5')+"<br>")
+	document.write(`3+4*(5-i)=${3+4*(5-i)}<br>`) //ECMA6
+	document.write("3+4*(5-i)="+`${3+4*(5-i)}`+ "<br>") //ECMA6
+	
+	//isNaN : 숫자가 아닌지 판별하는기능  ->  숫자가아닌경우 : true  숫자인경우:false
+	document.write("isNaN('한국')=" + isNaN('한국')+"<br>")
+	document.write("isNaN('123')=" + isNaN('123')+"<br>")
+	
+	//parseInt 정수형<= 문자열   문자열을 정수로
+	document.write("parseInt('10')="+parseInt('10')+"<br>") //10이라는 문자열을 정수로
+	document.write("parseInt('12',8)="+parseInt('12',8)+"<br>")//12이라는 문자열을 8진수로
+	document.write("parseInt('FF',16)="+parseInt('FF',16)+"<br>")//FF를 16진수로
+	
+	
+</script>
+</body>
+</html>

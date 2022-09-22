@@ -7,18 +7,45 @@
 <title>Insert title here</title>
 </head>
 <body>
+   100까지의 합 : <input type="text" id="result1" ><br>
+   100까지의 짝수합 : <input type="text" id="result2" ><br>
+   100까지의 홀수합 : <input type="text" id="result3" ><br>
 <script type="text/javascript">
-function result1() {
-	let tot = 0
-	for(let i=1; i<=100; i++){
-		tot+=i
-	}
-	result1.value =tot
-	document.wirte(input,result1.value)
-}
+
+
+   let sum1 = 0;
+   for (i = 1; i <= 100; i++) {
+      sum1 += i;
+   }
+   
+   result1.value=sum1;
+   
+   let sum2=0;
+   for(i=2; i<=100; i+=2){
+      sum2+=i;
+   }
+   result2.value=sum2;
+   
+   let sum3=0;
+   for(i=1; i<=100; i+=2){
+      sum3+=i;
+   }
+   result3.value=sum3;
+   
+   /*
+   let sum1 = 0;
+   let sum2 = 0;
+   let sum3 = 0;
+   for(let i=0; i<=100; i++){
+	   sum1 += i
+	   if(i%2--0) sum2 += i
+	   else sum3 +=i
+   }
+   result1.value = sum1
+   result2.value = sum2
+   result3.value = sum3
+   */
+     
 </script>
-100까지의 합 : <input type="text" id="result1" ><br>
-100까지의 짝수합 : <input type="text" id="result2" ><br>
-100까지의 홀수합 : <input type="text" id="result3" ><br>
 </body>
 </html>
