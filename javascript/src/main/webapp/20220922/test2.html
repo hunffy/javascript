@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>문제 맞추기</title>
+</head>
+<body>
+<script type="text/javascript">
+function getNumber(){
+   return Math.floor(Math.random()*100);
+} 
+let op = new Array("+","-","*","/","%")
+function getOp(){
+      return op[Math.floor(Math.random()*op.length)]
+}
+
+
+   
+    res = eval(sum)
+    cnt = 0; //입력갯수
+    gnt = 0; //정답수
+    
+   while(true){
+	   sum = getNumber() + getOp() + getNumber()
+	   ans = prompt(sum + "= 식의 정답을 입력하세요(종료:9999)", 0)
+    if (ans==9999) break;
+	   cnt++
+	   res=eval(sum);
+	   if(res!=ans){
+		   document.write("<font color='red' size='5'>오답 =></font")
+		   document.write(sum+"="+res+", 입력 값:"+ans +"<br>")
+		   
+	   }
+	   else{
+		   document.write("<font color='blue' size='5'>정답</font>")
+		   gnt++;
+	   }
+  }
+    document.write(cnt+"문제 중 총"+gnt+"개를 맞추셨습니다.")
+</script>
+</body>
+</html>
